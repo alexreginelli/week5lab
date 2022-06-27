@@ -1,27 +1,66 @@
 body {
   background-color: #EADEDA;
-}
-html {
-  margin: 0
+  font-family: 'Barlow', sans-serif;
 }
 
 h1 {
   background-color: #823329;
   color: #EADEDA;
   padding: 20px;
-  text-align: center
+  text-align: center;
+  font-family: 'Titan One', cursive;
+  font-size: 40px;
+  font-weight: normal;
 }
 
 .wrap {
   background-color: #BFB8AD;
   overflow: hidden;
-  display: flex;
   justify-content:center;
+}
+.wrap > p {
+  margin: 10px;
+  overflow:visible;
+  min-width: 200px
+}
+@media screen and (min-width: 888px) {
+  .wrap {
+    display: flex;
+  }
+  p {
+    width: 30%
+  }
+  .text {
+    display: flex;
+  }
 }
 
 img {
-  display: inline-block;
-  margin: 20px
+  display: block;
+  margin: 20px;
+  height: 340px;
+  width: 340px;
+  margin: auto
+}
+
+.form {
+  background-color: #ECDD7B;
+  border-radius: 12px;
+  margin: 20px auto;
+  padding: 15px;
+  min-width: 200px; max-width: 200px;
+  max-height: 300px;
+  display: block;
+}
+
+input[type=text],[type=date],[type=password]{
+  border: none;
+  border-bottom: 2px solid red;
+  background-color: #ECDD7B;
+}
+input {
+  margin: 10px;
+  max-width: 70px;
 }
 
 .lists {
@@ -31,25 +70,41 @@ img {
 .content {
   justify-content: center;
   display: flex;
-  width: 100%
-}
-
-.unordered {
-  display: inline-block;
-  background-color: #ECDD7B;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 table {
   background-color: #D3E298;
-  color: black
+  color: black;
+  border-collapse: collapse;
+  padding: 10px;
+  display: block;
+  border-radius: 12px;
+  margin: 7px
 }
 
+th, td {
+  border-bottom: 2px solid black;
+
+}
+
+.unordered {
+  background-color: #ECDD7B;
+  padding: 0 10px 10px;
+  border-radius: 12px;
+  margin: 7px
+}
 
 .text {
-  display: flex;
   background-color: #CE8147;
   color: white;
-  padding: 10px
+  padding: 10px;
+  justify-content: center;
+}
+.text > p {
+  margin: 10px
 }
 
 footer {
@@ -73,4 +128,8 @@ footer {
 .links > ul > li {
   display: inline;
   padding: 5px
+}
+
+li:hover {
+  background-color: #d15465
 }
